@@ -2,7 +2,7 @@ name: Keep Streamlit Awake
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -13,3 +13,4 @@ jobs:
       - name: Ping Streamlit app
         run: |
           curl -sS -o /dev/null -A "Mozilla/5.0" https://words-app-jihunyuk.streamlit.app/
+          curl -sS -o /dev/null -A "Mozilla/5.0" https://words-youtube.streamlit.app/
